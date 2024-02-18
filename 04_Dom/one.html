@@ -4,10 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
+    <style>
+.Whole-body{
+    background-color: black;
+    color: white;
+}
+    </style>
 </head>
 
-<body>
-
+<body class="Whole-body">
+    <div >
+        <h1 id="title" class="titleName">Shreepad Sawant</h1>
+        <p class="Para">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui quos iure modi velit quisquam,
+            saepe totam quis. Debitis ratione aliquam nulla omnis magnam. Similique, ducimus?</p>
+    </div>
 </body>
 
 </html>
@@ -23,4 +33,25 @@ but if we type console.dir(document) then display same as using window object. -
 <!-- //All enclosed within node.
 //Diagram
 Window > Document > Html > Head
-Window > Document > Html > Body -->   
+Window > Document > Html > Body -->
+
+//Dom Learning
+How to select Dom elements using id
+document.getElementById('title')
+Get attributes
+//Dont use class 
+document.getElementById('title').id
+document.getElementById('title').classname
+
+//use class
+document.getElementById('title').getAttribute('id')
+document.getElementById('title').getAttribute('class')
+
+//set attributes with adding
+document.getElementById('title').setAtribute('class' , 'titleName newClass')
+
+//set attributes with overriding
+document.getElementById('title').setAtribute('class' , 'newClass')
+
+
+
