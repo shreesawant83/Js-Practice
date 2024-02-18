@@ -42,13 +42,70 @@
 // }
 
 
-
-let mycodelanguages = {
-    js : "javascript",
-    cpp : "c plus plus",
+//Major difference between (For of loop) and (For in loop) is 
+//for of loop gives you direct values and for in loop gives you keys.
 
 
-}
-for(language in mycodelanguages){
-console.log(`key is ${language} and value is ${mycodelanguages[language]}`);
-}
+// let mycodelanguages = {
+//     js : "javascript",
+//     cpp : "c plus plus",
+
+
+// }
+// for(language in mycodelanguages){
+// console.log(`key is ${language} and value is ${mycodelanguages[language]}`);
+// }
+
+//For each loop
+
+// let Family = ["shreepad", "sushant", "sneha", "smita", "asha"];
+//In for each loop run callback function and give one any name parameter.
+// Family.forEach((fam) => {
+    //     console.log(fam);
+    // })
+    
+//In parameter what we get => (fam,index,coding) in short (values, index,whole array)
+// Family.forEach((fam,index,arr)=>{
+// console.log(`This is Values ${fam}`);
+// console.log(`This is index ${index}`);
+// console.log(`This is whole array ${arr}`);
+// })
+
+//Another method foreach loop executed.
+//create any name function
+// function printFamily(fam){
+    // console.log(fam);
+    // }
+// Family.forEach(printFamily); // give function reference (don't call direct function)
+//  For each don't return a value 
+
+
+//Learn [{},{},{}]
+
+// const myCodingLang=[
+//     {
+//         languageName:"javascript",
+//         languagefilename:"js"
+//     },
+//     {
+//         languageName:"java",
+//         languagefilename:"java"
+//     },{
+//         languageName:"python",
+//         languagefilename:"py"
+//     }
+// ]
+
+//Filter Method
+//Filter method returns value
+
+const myNum = [1,2,3,4,5,6,7,8,9,10];
+//if we use {} then we need to write return statement
+// const filteredvalue= myNum.filter((myNumValue)=>{
+//     return myNumValue > 5
+// })
+// console.log(filteredvalue);
+
+//if we dont use {} then we dont need to write return statement
+// const filteredvalue= myNum.filter((myNumValue)=>myNumValue>5)
+// console.log(filteredvalue);
