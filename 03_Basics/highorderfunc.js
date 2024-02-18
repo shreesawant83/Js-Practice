@@ -61,9 +61,9 @@
 // let Family = ["shreepad", "sushant", "sneha", "smita", "asha"];
 //In for each loop run callback function and give one any name parameter.
 // Family.forEach((fam) => {
-    //     console.log(fam);
-    // })
-    
+//     console.log(fam);
+// })
+
 //In parameter what we get => (fam,index,coding) in short (values, index,whole array)
 // Family.forEach((fam,index,arr)=>{
 // console.log(`This is Values ${fam}`);
@@ -74,8 +74,8 @@
 //Another method foreach loop executed.
 //create any name function
 // function printFamily(fam){
-    // console.log(fam);
-    // }
+// console.log(fam);
+// }
 // Family.forEach(printFamily); // give function reference (don't call direct function)
 //  For each don't return a value 
 
@@ -99,7 +99,7 @@
 //Filter Method
 //Filter method returns value
 
-const myNum = [1,2,3,4,5,6,7,8,9,10];
+// const myNum = [1,2,3,4,5,6,7,8,9,10];
 //if we use {} then we need to write return statement
 // const filteredvalue= myNum.filter((myNumValue)=>{
 //     return myNumValue > 5
@@ -109,3 +109,83 @@ const myNum = [1,2,3,4,5,6,7,8,9,10];
 //if we dont use {} then we dont need to write return statement
 // const filteredvalue= myNum.filter((myNumValue)=>myNumValue>5)
 // console.log(filteredvalue);
+
+//filter in multi dimentional array
+// const Books = [
+//     {
+//         BookName: "Bhagvat Geeta",
+//         Genre: "Fiction",
+//         publishDate: 1800
+//     },
+//     {
+//         BookName: "Geeta",
+//         Genre: "Fiction",
+//         publicDate: 1900
+//     }
+// ]
+
+// let NewFilterBooks=Books.filter((Allbooks)=>{
+// return Allbooks.publicDate >= 1900
+// })
+// console.log(NewFilterBooks);
+
+
+// //Map method
+// const myNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+// let newNumbers = myNumbers
+//     .map((num) => {
+//         return num + 1;
+//     }).map((num) => {
+//         return num - 1;
+//     })
+// console.log(newNumbers);
+//Chaining
+// let newNumbers = myNumbers
+//     .map((num) => {
+//         return num + 1;
+//     }).map((num) => {
+//         return num - 1;
+//     }).filter((num) => {
+//         return num > 8
+//     })
+// console.log(newNumbers);
+
+
+//Reduce Method 
+// const myNumbers = [1, 2, 3, 4]
+// //In callback there are 2 parameter (accumulator and currentvalue )
+// //In starting we need to mensioned accumulator value and then after next statment backstatement's
+// // current value will asign to the accumulator
+// let newNmbers = myNumbers.reduce((acc, num) => {
+//     return num + acc;
+// }, 0)
+
+// console.log(newNmbers);
+
+//reduce method in shopping cart 
+// const ShoopingCart=[
+//     {
+//         ProductName:"Shoes",
+//         ProductPrice:999
+//     },{
+//         ProductName:"Watch",
+//         ProductPrice:2000
+//     },{
+//         ProductName:"Shirt",
+//         ProductPrice:500
+//     },{
+//         ProductName:"Bluetooth",
+//         ProductPrice:900
+//     },{
+//         ProductName:"Mobile",
+//         ProductPrice:10000
+//     }
+// ]
+
+// let CartTotal= ShoopingCart.reduce((acc,ShopProduct)=>{
+//     return acc+ShopProduct.ProductPrice;
+// },0)
+// let CartTotal = ShoopingCart.reduce((acc,Prod)=>(acc+Prod.ProductPrice),0)
+// console.log(CartTotal);
+
