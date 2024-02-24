@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+    <style>
+        /* .helo{
+            height: 200px;
+            width: 200px;
+        } */
+    </style>
+</head>
+
+<body>
+    <div>
+        <ul id="images">
+            <li class="helo"><img id="nature" style="height: 100px; width: 100px;"
+                    src="https://wallup.net/wp-content/uploads/2019/09/652037-landscape-nature-tree-forest-woods-river-waterfall.jpg"
+                    alt="Nature Image"></li>
+            <li class="helo"><img id="city" style="height: 100px; width: 100px;"
+                    src="https://th.bing.com/th/id/OIP.M0u_hX3cNoTTrhGA8T2i6QHaFj?rs=1&pid=ImgDetMain" alt="City Image">
+            </li>
+            <li class="helo"><img id="owl" style="height: 100px; width: 100px;"
+                    src="https://th.bing.com/th/id/OIP.VrmdMqXRDzHQM1502DrfigHaE8?rs=1&pid=ImgDetMain" alt="Owl Image">
+            </li>
+            <li class="helo"><img id="code" style="height: 100px; width: 100px;"
+                    src="https://static.vecteezy.com/system/resources/previews/002/099/443/non_2x/programming-code-coding-or-hacker-background-programming-code-icon-made-with-binary-code-digital-binary-data-and-streaming-digital-code-vector.jpg"
+                    alt="Code Image"></li>
+        </ul>
+    </div>
+    <script>
+        // using events we get objects in function parameter
+        //Capturing mode (Top to bottom)
+        //Bubling mode (Bottom to top)
+
+        //preventDefault() use for stop default behavior
+
+        // document.getElementById('images').addEventListener('click', function (e) {
+        //     console.log("images clicked");
+        // })
+        // document.getElementById('owl').addEventListener('click', function (e) {
+        //     console.log("Owl clicked");
+        //     //i want to my code not propogated
+        //     e.stopPropagation();
+        // })
+
+        // document.querySelector('#images').addEventListener('click', function (e) {
+        //     // console.log("clicked");
+        //     // e.target.remove()
+        //     console.log(e.target.tagName)
+        //     if(e.target.tagName === "IMG"){
+        //         e.target.parentNode.remove()
+        //     }
+        //     console.log(e.target.parentNode);
+        // }, false)
+
+
+    </script>
+</body>
+
+</html>
