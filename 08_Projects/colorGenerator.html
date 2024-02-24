@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Generator</title>
+    <style>
+        .gameContainer {
+            text-align: center;
+            margin-top: 280px;
+        }
+    </style>
+</head>
+
+<body id="full-body">
+    <div class="gameContainer">
+        <button id="Start">Start</button>
+        <button id="Stop">Stop</button>
+    </div>
+    <script>
+        const generateRandomColor = function () {
+            const hexValue = "0123456789ABCDEF";
+            let ColorValue = "#";
+            for (RunIndex = 0; RunIndex < 6; RunIndex++) {
+                let PickValue = Math.floor(Math.random() * 16);
+                ColorValue += hexValue[PickValue]
+                // console.log(PickValue);
+            }
+            const bodyElement = document.querySelector("#full-body");
+            bodyElement.style.backgroundColor = ColorValue;
+        }
+        // generateRandomColor()
+
+        let RefProgram;
+        const Startgame = function () {
+            if(!RefProgram){
+                RefProgram=setInterval(generateRandomColor, 1000);
+            }
+        }
+
+        const Endgame = function(){
+            clearInterval(RefProgram);
+            RefProgram=null;
+        }
+        document.querySelector("#Start").addEventListener('click',Startgame);
+        document.querySelector("#Stop").addEventListener('click',Endgame);
+    </script>
+</body>
+
+</html>
