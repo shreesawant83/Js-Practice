@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set timeout</title>
+</head>
+
+<body>
+    <h1>Hello Shreepad</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+    <script>
+        const StartInterval = function (str) {
+            console.log(str + "Interval Start", Date.now());
+        }
+        const RunContinue = function () {
+            setInterval(StartInterval, 1000, "JS")
+        }
+        const StopFunction = function () {
+            clearInterval(StartInterval);
+        }
+
+        // document.querySelector("#start").addEventListener("click", RunContinue)
+        // document.querySelector("#stop").addEventListener("click", StopFunction)
+    </script>
+</body>
+
+</html>
