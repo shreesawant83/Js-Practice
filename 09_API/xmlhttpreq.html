@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Learning</title>
+</head>
+
+<body>
+    <div class="card">
+        <img src="" alt="Shree Sawant Profile" id="profile" style="height: 200px; width: 200px;">
+        <p >UserName : <span id="name"></span></p>
+        <p >Followers : <span id="followers"></span></p>
+    </div>
+    <script>
+        //Learning XMLHttpRequest API Call
+        //create object
+        const XHR = new XMLHttpRequest();
+        //create request url variable 
+        const RequestUrl = "https://api.github.com/users/shreesawant83";
+        //enter api request type and url in parameter
+        XHR.open("GET", RequestUrl);
+        //send request
+        XHR.send();
+        //to check current state
+        // console.log(XHR.readyState);
+        //check readstate change
+        XHR.onreadystatechange = function () {
+            // console.log(XHR.readyState);
+            if (XHR.readyState == 4) {
+                const NewData=JSON.parse(this.response)
+                // console.log(typeof NewData);
+                const avatar_url= NewData.avatar_url
+                const Followers= NewData.followers
+                const Username = NewData.login
+                document.querySelector("#profile").src=avatar_url
+                document.querySelector("#followers").innerText=Followers
+                document.querySelector("#name").innerText=Username
+                // console.log(avatar_url);
+                // console.log(Followers);
+            }
+        }
+
+
+
+    </script>
+</body>
+
+</html>
